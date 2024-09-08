@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Colour Confident Stitching | How to create beautiful colour palettes
+    </title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div id="svg-container" style="display: none"></div>
+    <h1>Colour Confident Stitching</h1>
+
+    <section>
+      <h2>Understanding color</h2>
+      <div id="samples__container" class="sample__container">
+        <div class="sample__block">
+          <div class="sample__info-container">
+            <p id="sample-info1"></p>
+          </div>
+          <div class="sample__chip-container">
+            <div id="sample-chip1" class="sample__chip"></div>
+            <input
+              class="sample__input"
+              type="color"
+              name="sample1"
+              id="sample1"
+              value="#f079f2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="add-sample">Add color sample</button>
+      </div>
+
+      <div id="color-wheel-blank"></div>
+    </section>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/converter.js"></script>
+  </body>
+</html>

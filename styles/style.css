@@ -1,0 +1,165 @@
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --lightgrey: #dedede;
+  --grey: #8f8f9d;
+  --black: #000000;
+  --color-light: #f8f8f4;
+  --color-light2: #e7e7da;
+  --color-dark: #27272b;
+  --color-accent: #ef0303;
+
+  /* Widths */
+  --width-sm: 48rem;
+  --width-md: 60rem;
+  --width-lg: 80rem;
+  --width-xl: 120rem;
+}
+
+/* ––––––––––––––––––––
+          RESET
+  ––––––––––––––––––––– */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ––––––––––––––––––––
+      GLOBAL STYLES
+  ––––––––––––––––––––– */
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  color: var(--color-dark);
+  background-color: var(--white);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+input[type="color"] {
+  cursor: pointer;
+}
+
+/* ––––––––––––––––––––
+      STRUCTURES
+  ––––––––––––––––––––– */
+
+/* Samples block */
+.sample__container {
+  width: 48rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.sample__container {
+  margin-inline: auto;
+}
+
+.sample__chip-container {
+  position: relative;
+  display: flex;
+}
+
+.sample__chip {
+  width: 20rem;
+  height: 10rem;
+}
+
+.sample__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 10rem;
+  opacity: 0;
+  z-index: 1;
+}
+
+.sample__btn-close {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Color wheel id="color-wheel" */
+
+.cls-red {
+  fill: #ec1c24;
+}
+
+.cls-red-orange {
+  fill: #f16528;
+}
+
+.cls-orange {
+  fill: #f37920;
+}
+
+.cls-yellow-orange {
+  fill: #f9a120;
+}
+
+.cls-yellow {
+  fill: #ffdd15;
+}
+
+.cls-yellow-green {
+  fill: #a0bb3e;
+}
+
+.cls-green {
+  fill: #00a14b;
+}
+
+.cls-blue-green {
+  fill: #03727e;
+}
+
+.cls-blue {
+  fill: #223f99;
+}
+
+.cls-blue-violet {
+  fill: #583f98;
+}
+
+.cls-red-violet {
+  fill: #b63461;
+}
+
+.cls-violet {
+  fill: #7f3f97;
+}
+
+.cls-wheel-border {
+  fill: none;
+  stroke: #231f20;
+  stroke-dasharray: 2 2;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 0.2px;
+}
+
+.cls-gray {
+  fill: #d5d5d5;
+}
