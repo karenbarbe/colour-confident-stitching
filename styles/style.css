@@ -101,6 +101,10 @@ input[type="color"] {
   height: 2rem;
 }
 
+/* ––––––––––––––––
+      SVGs
+  ––––––––––––––––– */
+
 /* Color wheel id="color-wheel" */
 
 .cls-red {
@@ -162,4 +166,26 @@ input[type="color"] {
 
 .cls-gray {
   fill: #d5d5d5;
+}
+
+/* Stitches samples */
+
+.stitches__container {
+  display: flex;
+}
+
+.demo__container {
+  width: 12rem;
+  height: 12rem;
+  padding: 0.25rem;
+  border-radius: 50%;
+  background-color: #f4f4f1;
+  overflow: hidden;
+}
+
+.cls-stitch3 {
+  fill: none;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 0.3px;
 }

@@ -103,3 +103,20 @@ function HSLToHex(h, s, l) {
 
   return "#" + r + g + b;
 }
+
+var colorPicker = new iro.ColorPicker("#picker", {
+  width: 320,
+  color: "#f00",
+  layout: [
+    {
+      component: iro.ui.Box,
+      options: {},
+    },
+    {
+      component: iro.ui.Slider,
+      options: {
+        sliderType: "hue",
+      },
+    },
+  ],
+});

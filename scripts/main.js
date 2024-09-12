@@ -19,6 +19,16 @@ const hueNames = [
   { name: "red-violet", range: [320, 355] },
   { name: "red", range: [355, 360] },
 ];
+/*
+function loadDemo() {
+  fetch("./images/assets/stitch-2.svg")
+    .then((response) => response.text())
+    .then((svgContent) => {
+      document.getElementById("stitch-container2").innerHTML = svgContent;
+      colorDemo();
+    })
+    .catch((error) => console.error("Error loading SVG file:", error));
+}*/
 
 function colorizeSampleChip() {
   const sampleChips = document.querySelectorAll('div[id^="sample-chip"]');
@@ -191,25 +201,15 @@ function updateButtonState() {
   addSampleButton.disabled = currentSamples >= maxSamples;
 }
 
-const addSampleButton = document.getElementById("add-sample");
-addSampleButton.addEventListener("click", () => {
-  addNewSample();
-  updateCurrentColors();
-  colorizeSampleChip();
-  renderColorInfo();
-  createTint();
-  updateButtonState();
-});
-
-function loadColorWheel() {
-  fetch("./images/assets/color-wheel.svg")
-    .then((response) => response.text())
-    .then((svgContent) => {
-      document.getElementById("color-wheel-blank").innerHTML = svgContent;
-      resetColorWheel();
-      colorizeColorWheel();
-    })
-    .catch((error) => console.error("Error loading SVG file:", error));
+function colorDemo(i) {
+  const stitch = document.querySelector(
+    `#stitch-container${i + 1} #stitch-${i + 1}`
+  );
+  if (stitch) {
+    stitch.setAttribute("stroke", colorPicker.color.hexString);
+  } else {
+    console.error("Stitch element not found");
+  }
 }
 
 function handleColorChange() {
@@ -218,17 +218,6 @@ function handleColorChange() {
   colorizeColorWheel();
   renderColorInfo();
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  loadColorWheel();
-  updateCurrentColors();
-  colorizeSampleChip();
-  renderColorInfo();
-});
-
-currentSamples.forEach((sample) => {
-  sample.addEventListener("change", handleColorChange);
-});
 
 function removeSample(event) {
   const sampleBlock = event.target.closest(".sample__block");
@@ -240,4 +229,41 @@ function removeSample(event) {
   }
 }
 
-// TODO: update change color wheel after removing sample
+/* Event Listeners*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  loadColorWheel();
+  loadSVGStitches();
+  updateCurrentColors();
+  colorizeSampleChip();
+  renderColorInfo();
+});
+
+const addSampleButton = document.getElementById("add-sample");
+addSampleButton.addEventListener("click", () => {
+  addNewSample();
+  updateCurrentColors();
+  colorizeSampleChip();
+  renderColorInfo();
+  createTint();
+  updateButtonState();
+});
+
+currentSamples.forEach((sample) => {
+  sample.addEventListener("change", handleColorChange);
+});
+
+colorPicker.on("color:change", function (color) {
+  const stitches = document.querySelectorAll(
+    '[id^="stitch-container"] [id^="stitch-"]'
+  );
+
+  if (color.index === 0) {
+    console.log(color.hexString);
+    stitches.forEach((stitch) => {
+      if (stitch) {
+        stitch.setAttribute("stroke", color.hexString);
+      }
+    });
+  }
+});
