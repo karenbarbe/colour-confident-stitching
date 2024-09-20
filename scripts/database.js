@@ -36,7 +36,7 @@ function createUList(index) {
 
   const columnHeader = document.createElement("li");
   columnHeader.classList.add("color-chart__col-header");
-  columnHeader.innerText = `${index}`;
+  columnHeader.innerText = index < 10 ? `0${index}` : `${index}`;
   ul.appendChild(columnHeader);
 
   return ul;
