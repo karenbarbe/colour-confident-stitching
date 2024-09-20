@@ -34,6 +34,11 @@ function createUList(index) {
   ul.classList.add("color-chart__column");
   ul.id = `color-chart__col${index}`;
 
+  const columnHeader = document.createElement("li");
+  columnHeader.classList.add("color-chart__col-header");
+  columnHeader.innerText = `${index}`;
+  ul.appendChild(columnHeader);
+
   return ul;
 }
 
