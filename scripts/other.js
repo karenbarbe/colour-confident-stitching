@@ -1,3 +1,10 @@
+const bgColors = [
+  { hex: "#F4F4F1", name: "White" },
+  { hex: "#C9ADA7", name: "Taupe" },
+  { hex: "#9A8C98", name: "Warm gray" },
+  { hex: "#22223B", name: "Black" },
+];
+
 const col1 = [
   "3713",
   "761",
@@ -539,6 +546,29 @@ const col20 = [
   "310",
 ];
 
+const allColumnData = {
+  col1,
+  col2,
+  col3,
+  col4,
+  col5,
+  col6,
+  col7,
+  col8,
+  col9,
+  col10,
+  col11,
+  col12,
+  col13,
+  col14,
+  col15,
+  col16,
+  col17,
+  col18,
+  col19,
+  col20,
+};
+
 const dmc = [
   {
     code: "01",
@@ -698,28 +728,28 @@ const dmc = [
     code: "23",
     name: "Apple Blossom",
     dmcName: "Sakura",
-    hex: "#f2e4e5",
+    hex: "#FFE5F1",
   },
 
   {
     code: "24",
     name: "White Lavender",
     dmcName: "Heather White",
-    hex: "#e6d7e2",
+    hex: "#F6E0EB",
   },
 
   {
     code: "25",
     name: "Ultra Light Lavender",
     dmcName: "Cornflower White",
-    hex: "#d9cfdf",
+    hex: "#EEDDEE",
   },
 
   {
     code: "26",
     name: "Pale Lavender",
     dmcName: "Lavender White",
-    hex: "#c5c1d8",
+    hex: "#E3D4ED",
   },
 
   {
@@ -768,35 +798,35 @@ const dmc = [
     code: "33",
     name: "Fuchsia",
     dmcName: "Allium",
-    hex: "#723d72",
+    hex: "#BA6FC3",
   },
 
   {
     code: "34",
     name: "Dark Fuchsia",
     dmcName: "Tyrian",
-    hex: "#55014b",
+    hex: "#812C7E",
   },
 
   {
     code: "35",
     name: "Very Dark Fuchsia",
     dmcName: "Plum",
-    hex: "#330027",
+    hex: "#7D2171",
   },
 
   {
     code: "150",
     name: "Ultra Very Dark Dusty Rose",
     dmcName: "Raspberry",
-    hex: "#5d001f",
+    hex: "#97023E",
   },
 
   {
     code: "151",
     name: "Very Light Dusty Rose",
     dmcName: "Marshmallow",
-    hex: "#e2acb9",
+    hex: "#FFBDCA",
   },
 
   {
@@ -810,14 +840,14 @@ const dmc = [
     code: "153",
     name: "Very Light Violet",
     dmcName: "Pink Lilac",
-    hex: "#c9b3d0",
+    hex: "#EBC6E1",
   },
 
   {
     code: "154",
     name: "Very Dark Grape",
     dmcName: "Prune",
-    hex: "#14000f",
+    hex: "#421032",
   },
 
   {
@@ -929,28 +959,28 @@ const dmc = [
     code: "208",
     name: "Very Dark Lavender",
     dmcName: "Pansy",
-    hex: "#633d88",
+    hex: "#9C5BA4",
   },
 
   {
     code: "209",
     name: "Dark Lavender",
     dmcName: "Lilac",
-    hex: "#866fa9",
+    hex: "#C492C8",
   },
 
   {
     code: "210",
     name: "Medium Lavender",
     dmcName: "Parma Violet",
-    hex: "#a999c8",
+    hex: "#E1ADDA",
   },
 
   {
     code: "211",
     name: "Light Lavender",
     dmcName: "Light Parma Violet",
-    hex: "#c2b8da",
+    hex: "#E5C3E6",
   },
 
   {
@@ -999,7 +1029,7 @@ const dmc = [
     code: "304",
     name: "Medium Red",
     dmcName: "Chinese Lacquer",
-    hex: "#6d0023",
+    hex: "#9C073B",
   },
 
   {
@@ -1013,7 +1043,7 @@ const dmc = [
     code: "309",
     name: "Ultra Very Dark Rose",
     dmcName: "Crushed Raspberry",
-    hex: "#7d002c",
+    hex: "#B4235A",
   },
 
   {
@@ -1041,14 +1071,14 @@ const dmc = [
     code: "315",
     name: "Medium Dark Antique Mauve",
     dmcName: "Archil",
-    hex: "#582737",
+    hex: "#894368",
   },
 
   {
     code: "316",
     name: "Medium Antique Mauve",
     dmcName: "Heather",
-    hex: "#a6738a",
+    hex: "#BB7C9E",
   },
 
   {
@@ -1083,7 +1113,7 @@ const dmc = [
     code: "321",
     name: "Red",
     dmcName: "Carmine Red",
-    hex: "#6f0012",
+    hex: "#C2003A",
   },
 
   {
@@ -1097,14 +1127,14 @@ const dmc = [
     code: "326",
     name: "Very Dark Rose",
     dmcName: "Rhubarb",
-    hex: "#680024",
+    hex: "#BA0840",
   },
 
   {
     code: "327",
     name: "Dark Violet",
     dmcName: "Dark Purple",
-    hex: "#462350",
+    hex: "#65356E",
   },
 
   {
@@ -1125,7 +1155,7 @@ const dmc = [
     code: "335",
     name: "Rose",
     dmcName: "Dark Pink",
-    hex: "#aa3c5e",
+    hex: "#D24B6F",
   },
 
   {
@@ -1153,42 +1183,42 @@ const dmc = [
     code: "347",
     name: "Very Dark Salmon",
     dmcName: "Egyptian Red",
-    hex: "#840821",
+    hex: "#B11B39",
   },
 
   {
     code: "349",
     name: "Dark Coral",
     dmcName: "Red Pepper",
-    hex: "#890012",
+    hex: "#BA1F17",
   },
 
   {
     code: "350",
     name: "Medium Coral",
     dmcName: "Vermillion",
-    hex: "#9d1a1e",
+    hex: "#D03E35",
   },
 
   {
     code: "351",
     name: "Coral",
     dmcName: "Coral",
-    hex: "#ac3632",
+    hex: "#E55C52",
   },
 
   {
     code: "352",
     name: "Light Coral",
     dmcName: "Salmon",
-    hex: "#cd766a",
+    hex: "#FDA8A1",
   },
 
   {
     code: "353",
     name: "Peach",
     dmcName: "Ballet Slippers",
-    hex: "#e9b7a8",
+    hex: "#FFCDC7",
   },
 
   {
@@ -1266,6 +1296,7 @@ const dmc = [
     name: "Dark Desert Sand",
     dmcName: "Fawn",
     hex: "#a67767",
+    previousCode: "3773",
   },
 
   {
@@ -1405,7 +1436,7 @@ const dmc = [
     code: "498",
     name: "Dark Red",
     dmcName: "Red Kiss",
-    hex: "#520014",
+    hex: "#971C41",
   },
 
   {
@@ -1435,13 +1466,6 @@ const dmc = [
     dmcName: "Thyme Green",
     hex: "#7d9a8e",
   },
-  /*
-  {
-    code: "504",
-    name: "Very Light Blue Green",
-    dmcName: "",
-    hex: "#acdac1",
-  },*/
 
   {
     code: "505",
@@ -1517,28 +1541,28 @@ const dmc = [
     code: "550",
     name: "Very Dark Violet",
     dmcName: "Passionflower",
-    hex: "#2c033c",
+    hex: "#47155B",
   },
 
   {
     code: "552",
     name: "Medium Violet",
     dmcName: "Violet",
-    hex: "#562f6e",
+    hex: "#824D8F",
   },
 
   {
     code: "553",
     name: "Violet",
     dmcName: "Violet Amethyst",
-    hex: "#6d4987",
+    hex: "#B077B6",
   },
 
   {
     code: "554",
     name: "Light Violet",
     dmcName: "Pastel Purple",
-    hex: "#af92b8",
+    hex: "#D2A2D2",
   },
 
   {
@@ -1601,42 +1625,42 @@ const dmc = [
     code: "600",
     name: "Very Dark Cranberry",
     dmcName: "Radish",
-    hex: "#890041",
+    hex: "#D1006C",
   },
 
   {
     code: "601",
     name: "Dark Cranberry",
     dmcName: "Impatiens",
-    hex: "#9c1752",
+    hex: "#D1235B",
   },
 
   {
     code: "602",
     name: "Medium Cranberry",
     dmcName: "Pink Verbena",
-    hex: "#b64073",
+    hex: "#E55283",
   },
 
   {
     code: "603",
     name: "Cranberry",
     dmcName: "Macaroon Pink",
-    hex: "#d06f97",
+    hex: "#F27DA4",
   },
 
   {
     code: "604",
     name: "Light Cranberry",
     dmcName: "Pink Hyacinth",
-    hex: "#e197b4",
+    hex: "#F99FBD",
   },
 
   {
     code: "605",
     name: "Very Light Cranberry",
     dmcName: "Rosebud",
-    hex: "#e8afc5",
+    hex: "#F8B9CE",
   },
 
   {
@@ -1741,7 +1765,7 @@ const dmc = [
     code: "666",
     name: "Bright Red",
     dmcName: "Scarlet",
-    hex: "#880000",
+    hex: "#E00000",
   },
 
   {
@@ -1818,7 +1842,7 @@ const dmc = [
     code: "718",
     name: "Plum",
     dmcName: "Rose Magenta",
-    hex: "#74004d",
+    hex: "#B3097D",
   },
 
   {
@@ -1883,19 +1907,13 @@ const dmc = [
     dmcName: "Khaki",
     hex: "#4b3800",
   },
-  /*
-  {
-    code: "731",
-    name: "Dark Olive Green",
-    dmcName: "",
-    hex: "#6b580b",
-  },*/
 
   {
     code: "732",
     name: "Olive Green",
     dmcName: "Light Bronzed Green",
     hex: "#665100",
+    previousCode: "731",
   },
 
   {
@@ -1931,6 +1949,7 @@ const dmc = [
     name: "Tangerine",
     dmcName: "Orange Papaya",
     hex: "#e56100",
+    previousCode: "971",
   },
 
   {
@@ -2000,14 +2019,14 @@ const dmc = [
     code: "760",
     name: "Salmon",
     dmcName: "Dusty Pink",
-    hex: "#c67d80",
+    hex: "#E88DA0",
   },
 
   {
     code: "761",
     name: "Light Salmon",
     dmcName: "Rose Dawn",
-    hex: "#dca6a7",
+    hex: "#F9B9CA",
   },
 
   {
@@ -2030,26 +2049,19 @@ const dmc = [
     dmcName: "Blue Summer Rain",
     hex: "#bcced4",
   },
-  /*
-  {
-    code: "776",
-    name: "Medium Pink",
-    dmcName: "",
-    hex: "#fca8ad",
-  },*/
 
   {
     code: "777",
     name: "Very Dark Raspberry",
     dmcName: "Wine",
-    hex: "#420016",
+    hex: "#70003C",
   },
 
   {
     code: "778",
     name: "Very Light Antique Mauve",
     dmcName: "Amethyst Haze",
-    hex: "#c8a6a9",
+    hex: "#D3A7B7",
   },
 
   {
@@ -2065,19 +2077,13 @@ const dmc = [
     dmcName: "Chestnut",
     hex: "#7b3e00",
   },
-  /*
-  {
-    code: "781",
-    name: "Very Dark Topaz",
-    dmcName: "",
-    hex: "#a25f1f",
-  },*/
 
   {
     code: "782",
     name: "Dark Topaz",
     dmcName: "Wicker",
     hex: "#925700",
+    previousCode: "781",
   },
 
   {
@@ -2163,14 +2169,7 @@ const dmc = [
     dmcName: "Inky Blue",
     hex: "#0a2447",
   },
-  /*
-  {
-    code: "806",
-    name: "Medium Dark Wedgwood",
-    dmcName: "",
-    hex: "#1d6c87",
-  },
-*/
+
   {
     code: "807",
     name: "Peacock Blue",
@@ -2196,42 +2195,42 @@ const dmc = [
     code: "814",
     name: "Dark Garnet",
     dmcName: "Vin Rouge",
-    hex: "#2a000c",
+    hex: "#541835",
   },
 
   {
     code: "815",
     name: "Medium Garnet",
     dmcName: "Black Cherry",
-    hex: "#320009",
+    hex: "#6C2338",
   },
 
   {
     code: "816",
     name: "Garnet",
     dmcName: "Cherry Red",
-    hex: "#550012",
+    hex: "#8F002B",
   },
 
   {
     code: "817",
     name: "Very Dark Coral Red",
     dmcName: "Japanese Red",
-    hex: "#85000d",
+    hex: "#B00C0C",
   },
 
   {
     code: "818",
     name: "Baby Pink",
     dmcName: "Powder Pink",
-    hex: "#eec9cb",
+    hex: "#FEDCEB",
   },
 
   {
     code: "819",
     name: "Light Baby Pink",
     dmcName: "Layette",
-    hex: "#f4dfd8",
+    hex: "#FCE3E3",
   },
 
   {
@@ -2375,13 +2374,6 @@ const dmc = [
   },
 
   {
-    code: "868",
-    name: "Hazel Nut Brown",
-    dmcName: "",
-    hex: "#995c30",
-  },
-
-  {
     code: "869",
     name: "Very Dark Hazelnut Brown",
     dmcName: "Coffee",
@@ -2399,28 +2391,28 @@ const dmc = [
     code: "891",
     name: "Dark Carnation",
     dmcName: "Geranium",
-    hex: "#be1a45",
+    hex: "#EF3E67",
   },
 
   {
     code: "892",
     name: "Medium Carnation",
     dmcName: "Dahlia",
-    hex: "#c8344f",
+    hex: "#F9486B",
   },
 
   {
     code: "893",
     name: "Light Carnation",
     dmcName: "Dahlia",
-    hex: "#cc4a6c",
+    hex: "#FF668C",
   },
 
   {
     code: "894",
     name: "Very Light Carnation",
     dmcName: "Rose",
-    hex: "#e88aa2",
+    hex: "#FF8FB2",
   },
 
   {
@@ -2441,7 +2433,7 @@ const dmc = [
     code: "899",
     name: "Medium Rose",
     dmcName: "Watermelon",
-    hex: "#be5a79",
+    hex: "#E87894",
   },
 
   {
@@ -2455,7 +2447,7 @@ const dmc = [
     code: "902",
     name: "Very Dark Garnet",
     dmcName: "Magenta Red",
-    hex: "#410015",
+    hex: "#731C3C",
   },
 
   {
@@ -2525,14 +2517,14 @@ const dmc = [
     code: "915",
     name: "Dark Plum",
     dmcName: "Bougainvillea",
-    hex: "#3b001d",
+    hex: "#800059",
   },
 
   {
     code: "917",
     name: "Medium Plum",
     dmcName: "Dark Magenta",
-    hex: "#780752",
+    hex: "#A80076",
   },
 
   {
@@ -2728,14 +2720,14 @@ const dmc = [
     code: "956",
     name: "Geranium",
     dmcName: "Hot Pink",
-    hex: "#d24977",
+    hex: "#F6608F",
   },
 
   {
     code: "957",
     name: "Pale Geranium",
     dmcName: "Bubblegum Pink",
-    hex: "#ea89a8",
+    hex: "#FF9EBE",
   },
 
   {
@@ -2756,21 +2748,21 @@ const dmc = [
     code: "961",
     name: "Dark Dusty Rose",
     dmcName: "Rose Garden",
-    hex: "#b74e6e",
+    hex: "#CD4778",
   },
 
   {
     code: "962",
     name: "Medium Dusty Rose",
     dmcName: "Antique Rose",
-    hex: "#c26f85",
+    hex: "#E37DA2",
   },
 
   {
     code: "963",
     name: "Ultra Very Light Dusty Rose",
     dmcName: "Candy Pink",
-    hex: "#efc0c9",
+    hex: "#FFD6E3",
   },
 
   {
@@ -2800,13 +2792,6 @@ const dmc = [
     dmcName: "Neon Orange",
     hex: "#ef6915",
   },
-  /*
-  {
-    code: "971",
-    name: "Pumpkin",
-    dmcName: "",
-    hex: "#fc670d",
-  },*/
 
   {
     code: "972",
@@ -3064,14 +3049,15 @@ const dmc = [
     code: "3326",
     name: "Light Rose",
     dmcName: "Wild Rose",
-    hex: "#d990a0",
+    hex: "#FFA8BA",
+    previousCode: "776",
   },
 
   {
     code: "3328",
     name: "Dark Salmon",
     dmcName: "Amaranth",
-    hex: "#993a40",
+    hex: "#D15767",
   },
 
   {
@@ -3120,14 +3106,14 @@ const dmc = [
     code: "3350",
     name: "Ultra Dark Dusty Rose",
     dmcName: "Dragonfruit",
-    hex: "#751231",
+    hex: "#BB1B5B",
   },
 
   {
     code: "3354",
     name: "Light Dusty Rose",
     dmcName: "Baker Miller Pink",
-    hex: "#ce8c9e",
+    hex: "#F8B0C6",
   },
 
   {
@@ -3162,91 +3148,91 @@ const dmc = [
     code: "3607",
     name: "Light Plum",
     dmcName: "Hibiscus",
-    hex: "#933879",
+    hex: "#DF43A9",
   },
 
   {
     code: "3608",
     name: "Very Light Plum",
     dmcName: "Foxglove",
-    hex: "#c282ab",
+    hex: "#F495D1",
   },
 
   {
     code: "3609",
     name: "Ultra Light Plum",
     dmcName: "Lotus Blossom",
-    hex: "#d6a5c8",
+    hex: "#FCBBE4",
   },
 
   {
     code: "3685",
     name: "Very Dark Mauve",
     dmcName: "Bramble",
-    hex: "#41001e",
+    hex: "#770D3F",
   },
 
   {
     code: "3687",
     name: "Mauve",
     dmcName: "Berry Smoothie",
-    hex: "#954165",
+    hex: "#CD568D",
   },
 
   {
     code: "3688",
     name: "Medium Mauve",
     dmcName: "Pink Lupine",
-    hex: "#b16986",
+    hex: "#DA8BAC",
   },
 
   {
     code: "3689",
     name: "Light Mauve",
     dmcName: "Pale Orchid",
-    hex: "#dfb1c4",
+    hex: "#F9BDD3",
   },
 
   {
     code: "3705",
     name: "Dark Melon",
     dmcName: "Guava",
-    hex: "#ba263d",
+    hex: "#E84F63",
   },
 
   {
     code: "3706",
     name: "Medium Melon",
     dmcName: "Flamingo",
-    hex: "#df697f",
+    hex: "#F57A93",
   },
 
   {
     code: "3708",
     name: "Light Melon",
     dmcName: "Azalea",
-    hex: "#e98aa2",
+    hex: "#FF9EBA",
   },
 
   {
     code: "3712",
     name: "Medium Salmon",
     dmcName: "Blush",
-    hex: "#b1585c",
+    hex: "#DD7288",
   },
 
   {
     code: "3713",
     name: "Very Light Salmon",
     dmcName: "Rose Quartz",
-    hex: "#ecc4c5",
+    hex: "#FFD1E0",
   },
 
   {
     code: "3716",
     name: "Very Light Rose",
     dmcName: "Peony",
-    hex: "#de99af",
+    hex: "#FFA8C5",
   },
 
   {
@@ -3267,28 +3253,28 @@ const dmc = [
     code: "3726",
     name: "Dark Antique Mauve",
     dmcName: "Iced Plum",
-    hex: "#794452",
+    hex: "#A05A7D",
   },
 
   {
     code: "3727",
     name: "Light Antique Mauve",
     dmcName: "Lycee",
-    hex: "#bc8f9e",
+    hex: "#CB9AB2",
   },
 
   {
     code: "3731",
     name: "Very Dark Dusty Rose",
     dmcName: "Pink Pepper",
-    hex: "#a0395c",
+    hex: "#DB5C7E",
   },
 
   {
     code: "3733",
     name: "Dusty Rose",
     dmcName: "Pink Hollyhock",
-    hex: "#ba677f",
+    hex: "#F08AA3",
   },
 
   {
@@ -3359,6 +3345,7 @@ const dmc = [
     name: "Medium Wedgwood",
     dmcName: "Fjord Blue",
     hex: "#34728f",
+    previousCode: "806",
   },
 
   {
@@ -3409,13 +3396,6 @@ const dmc = [
     dmcName: "Glazed Chestnut",
     hex: "#825041",
   },
-  /*
-  {
-    code: "3773",
-    name: "Medium Desert Sand",
-    dmcName: "",
-    hex: "#cf866d",
-  },*/
 
   {
     code: "3774",
@@ -3491,42 +3471,42 @@ const dmc = [
     code: "3801",
     name: "Very Dark Melon",
     dmcName: "Tulip Red",
-    hex: "#ad0025",
+    hex: "#F43653",
   },
 
   {
     code: "3802",
     name: "Very Dark Antique Mauve",
     dmcName: "Aubergine",
-    hex: "#481426",
+    hex: "#7C2759",
   },
 
   {
     code: "3803",
     name: "Dark Mauve",
     dmcName: "Bordeaux",
-    hex: "#5d133a",
+    hex: "#8D024A",
   },
 
   {
     code: "3804",
     name: "Dark Cyclamen Pink",
     dmcName: "Bengal Rose",
-    hex: "#9d2360",
+    hex: "#E22881",
   },
 
   {
     code: "3805",
     name: "Cyclamen Pink",
     dmcName: "Fuschia",
-    hex: "#aa3870",
+    hex: "#E94E99",
   },
 
   {
     code: "3806",
     name: "Light Cyclamen Pink",
     dmcName: "Carnation",
-    hex: "#d1789f",
+    hex: "#FF8FB8",
   },
 
   {
@@ -3576,6 +3556,7 @@ const dmc = [
     name: "Light Blue Green",
     dmcName: "Lichen Green",
     hex: "#a4b7a9",
+    previousCode: "504",
   },
 
   {
@@ -3701,49 +3682,49 @@ const dmc = [
     code: "3831",
     name: "Dark Raspberry",
     dmcName: "Wild Strawberry",
-    hex: "#80002a",
+    hex: "#B02754",
   },
 
   {
     code: "3832",
     name: "Medium Raspberry",
     dmcName: "Strawberry",
-    hex: "#a6344f",
+    hex: "#D15784",
   },
 
   {
     code: "3833",
     name: "Light Raspberry",
     dmcName: "Strawberry Sorbet",
-    hex: "#bd5b70",
+    hex: "#E684AF",
   },
 
   {
     code: "3834",
     name: "Dark Grape",
     dmcName: "Red Grape",
-    hex: "#3f163a",
+    hex: "#673257",
   },
 
   {
     code: "3835",
     name: "Medium Grape",
     dmcName: "Purple Violet",
-    hex: "#724a6e",
+    hex: "#A0658E",
   },
 
   {
     code: "3836",
     name: "Light Grape",
     dmcName: "Thyme Flower",
-    hex: "#9f7e9b",
+    hex: "#C48DB3",
   },
 
   {
     code: "3837",
     name: "Ultra Dark Lavender",
     dmcName: "Purple",
-    hex: "#482671",
+    hex: "#7C4899",
   },
 
   {
@@ -3950,6 +3931,88 @@ const dmc = [
   },
 
   {
+    code: "Ecru",
+    name: "Ecru",
+    dmcName: "Ecru",
+    hex: "#e7dbc4",
+  },
+
+  {
+    code: "B5200",
+    name: "Snow White",
+    dmcName: "White Light",
+    hex: "#fefffd",
+  },
+
+  {
+    code: "Blanc",
+    name: "White",
+    dmcName: "Blanc",
+    hex: "#f8f7f5",
+  },
+];
+
+const deprecatedDMC = [
+  /*
+  {
+    code: "504",
+    name: "Very Light Blue Green",
+    dmcName: "",
+    hex: "#acdac1",
+  },*/
+  /*
+  {
+    code: "731",
+    name: "Dark Olive Green",
+    dmcName: "",
+    hex: "#6b580b",
+  },*/
+  /*
+  {
+    code: "776",
+    name: "Medium Pink",
+    dmcName: "",
+    hex: "#fca8ad",
+  },*/
+  /*
+  {
+    code: "781",
+    name: "Very Dark Topaz",
+    dmcName: "",
+    hex: "#a25f1f",
+  },*/
+  /*
+  {
+    code: "806",
+    name: "Medium Dark Wedgwood",
+    dmcName: "",
+    hex: "#1d6c87",
+  },
+*/
+  /*
+  {
+    code: "868",
+    name: "Hazel Nut Brown",
+    dmcName: "",
+    hex: "#995c30",
+  },
+*/
+  /*
+  {
+    code: "971",
+    name: "Pumpkin",
+    dmcName: "",
+    hex: "#fc670d",
+  },*/
+  /*
+  {
+    code: "3773",
+    name: "Medium Desert Sand",
+    dmcName: "",
+    hex: "#cf866d",
+  },*/
+  /*
+  {
     code: "3880",
     name: "Medium Very Dark Shell Pink",
     dmcName: "",
@@ -4060,25 +4123,5 @@ const dmc = [
     dmcName: "",
     hex: "#878471",
   },
-
-  {
-    code: "Ecru",
-    name: "Ecru",
-    dmcName: "Ecru",
-    hex: "#e7dbc4",
-  },
-
-  {
-    code: "B5200",
-    name: "Snow White",
-    dmcName: "White Light",
-    hex: "#fefffd",
-  },
-
-  {
-    code: "Blanc",
-    name: "White",
-    dmcName: "Blanc",
-    hex: "#f8f7f5",
-  },
+*/
 ];

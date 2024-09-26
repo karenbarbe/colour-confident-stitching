@@ -103,7 +103,102 @@ input[type="color"] {
   height: 2rem;
 }
 
-/* Color chart section */
+/* Color search */
+.color-search__container {
+  padding: 2rem;
+}
+
+/* Background samples */
+.bg-chips__container {
+  display: flex;
+  padding: 2rem;
+}
+
+/* Background buttons */
+.bg-button__container {
+  display: flex;
+  gap: 0.5rem;
+}
+.bg-button__container button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  outline-offset: 0.12rem;
+}
+.bg-button__container button.focused {
+  outline: 2px solid black;
+}
+
+/* Background input */
+
+.bg-input__container {
+  position: relative;
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+.bg-input__container div {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background: conic-gradient(
+    from 0deg,
+    #e31837,
+    #fdaf75,
+    #febe10,
+    #76d356,
+    #12c6b7,
+    #c63fcd,
+    #e31837
+  );
+}
+
+.bg-input__container input[type="color"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Color card and samples*/
+.color-card__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem;
+}
+
+.color-card__content {
+  min-width: 12rem;
+  padding-block: 2rem 4rem;
+  padding-inline: 2rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+.color-card__sample {
+  display: flex;
+  gap: 2rem;
+}
+
+.color-card__sample > * {
+  width: 12rem;
+  height: 12rem;
+  overflow: hidden;
+}
+
+.color-card__label {
+  font-size: 2.4rem;
+}
+
+/* Color chart */
 
 .color-chart__container {
   display: grid;
@@ -121,6 +216,13 @@ input[type="color"] {
 
 .color-chart__column li:hover {
   box-shadow: inset 0 0 0 0.1rem white;
+}
+
+.color-chart__column li.focused {
+  box-shadow: inset 0 0 0 0.15rem white;
+}
+.color-chart__column li.focused:hover {
+  box-shadow: inset 0 0 0 0.2rem white;
 }
 
 li.color-chart__col-header {
@@ -215,4 +317,11 @@ li.color-chart__col-header {
   stroke-linecap: round;
   stroke-miterlimit: 10;
   stroke-width: 0.3px;
+}
+
+.cls-thread-sample {
+  fill: none;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 2.8px;
 }

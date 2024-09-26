@@ -1,3 +1,6 @@
+let currentBgColor = "";
+let alternativeBgColors = [];
+
 let currentColors = [];
 
 let currentSamples = document.querySelectorAll(
@@ -19,16 +22,6 @@ const hueNames = [
   { name: "red-violet", range: [320, 355] },
   { name: "red", range: [355, 360] },
 ];
-/*
-function loadDemo() {
-  fetch("./images/assets/stitch-2.svg")
-    .then((response) => response.text())
-    .then((svgContent) => {
-      document.getElementById("stitch-container2").innerHTML = svgContent;
-      colorDemo();
-    })
-    .catch((error) => console.error("Error loading SVG file:", error));
-}*/
 
 function colorizeSampleChip() {
   const sampleChips = document.querySelectorAll('div[id^="sample-chip"]');
@@ -229,6 +222,259 @@ function removeSample(event) {
   }
 }
 
+function getInputColor() {
+  const inputElement = document.getElementById("color-search");
+  const input = inputElement.value.trim();
+
+  if (input === "") {
+    renderSearchMessage("enter");
+    return;
+  }
+
+  inputElement.value = "";
+  inputElement.focus();
+
+  return input;
+}
+
+function getCellColor(event) {
+  const cell = event.target.closest("li");
+  console.log(`${cell.dataset.code} ${cell.dataset.name}`);
+  return cell.dataset.code;
+}
+
+function renderSearchMessage(hint) {
+  const message = document.getElementById("search-message");
+
+  if (hint === "enter") {
+    message.textContent = `Please enter a color code`;
+  } else if (hint === "notfound") {
+    message.textContent = `Oops! We didn’t find that color`;
+  } else if (hint === "clear") {
+    message.textContent = "";
+  }
+}
+
+function findColor(colorCode) {
+  if (colorCode) {
+    const lowerColorCode = colorCode.toLowerCase();
+    const foundColor = dmc.find(
+      (color) =>
+        color.code.toLowerCase() === lowerColorCode ||
+        (color.previousCode &&
+          color.previousCode.toLowerCase() === lowerColorCode)
+    );
+
+    if (foundColor) {
+      return foundColor;
+    } else {
+      renderSearchMessage("notfound");
+      return;
+    }
+  }
+}
+
+function focusNewColor(code) {
+  const listItems = Array.from(
+    document.querySelectorAll("#color-chart__container li")
+  );
+  listItems.forEach((item) => {
+    item.classList.remove("focused");
+  });
+  const cell = listItems.find((li) => li.getAttribute("data-code") === code);
+  cell.classList.add("focused");
+}
+
+function handleNewColor(colorCode) {
+  const color = findColor(colorCode);
+  if (color) {
+    const codeOnCard = document.getElementById("color-card-code");
+    const nameOnCard = document.getElementById("color-card-name");
+    const colorChip = document.getElementById("color-card-chip");
+    const stitches = document.querySelectorAll(
+      '[id^="color-card-sample"] [id^="stitch-"]'
+    );
+
+    const { code, dmcName, hex, previousCode } = color;
+
+    codeOnCard.textContent = `${code}`;
+    nameOnCard.textContent = previousCode
+      ? `${dmcName} (was ${previousCode})`
+      : `${dmcName}`;
+
+    renderSearchMessage("clear");
+    colorChip.style.backgroundColor = hex;
+    stitches.forEach((stitch) => {
+      if (stitch) {
+        stitch.setAttribute("stroke", hex);
+      }
+    });
+
+    focusNewColor(code);
+  }
+  return;
+}
+
+function getStartColor() {
+  const total = dmc.length;
+  const randomIndex = Math.floor(Math.random() * total);
+  const randomColor = dmc[randomIndex];
+  return randomColor.code;
+}
+
+/* BACKGROUND BUTTONS */
+
+function createBgButtons(array) {
+  const fragment = document.createDocumentFragment();
+  const container = document.getElementById("bg-button-container");
+  const total = array.length;
+  for (let i = 0; i < total; i++) {
+    const button = document.createElement("button");
+    button.id = `bg-button${i + 1}`;
+    const bgColor = array[i].hex;
+    button.style.backgroundColor = bgColor;
+    button.title = array[i].name;
+    button.addEventListener("click", (e) => {
+      changeBgColor(e.target);
+    });
+    fragment.appendChild(button);
+  }
+  container.appendChild(fragment);
+}
+/*
+function colorizeBgButtons() {
+  const bgButtons = document.querySelectorAll("button[id^=bg-button]");
+  bgButtons.forEach((button, index) => {
+    console.log(alternativeBgColors[index].hex);
+    button.style.backgroundColor = alternativeBgColors[index].hex;
+  });
+}*/
+
+/*  SET and CHANGE BACKGROUND COLOR */
+
+function findLightest(array) {
+  const lightnessBgs = array.map((bgColor) => {
+    const hsl = hexToHSL(bgColor.hex);
+    const { lightness } = hsl;
+    return lightness;
+  });
+  const lightest = Math.max(...lightnessBgs);
+  const index = lightnessBgs.findIndex((bg) => bg === lightest);
+  const lightestBg = bgColors[index];
+  return lightestBg.hex;
+}
+
+function setBgColor(array) {
+  currentBgColor = findLightest(array); // needs to be global or scoped?
+  const container = document.getElementById("color-card-container");
+  container.style.backgroundColor = currentBgColor;
+}
+/*
+function getAlternativeBgColors(array) {
+  alternativeBgColors = array.filter((bg) => bg.hex !== currentBgColor);
+}*/
+
+function changeBgColor(element) {
+  const container = document.getElementById("color-card-container");
+  container.style.backgroundColor = element.style.backgroundColor;
+
+  const bgButtons = document.querySelectorAll("button[id^=bg-button]");
+  bgButtons.forEach((button) => {
+    button.classList.remove("focused");
+  });
+
+  element.classList.add("focused");
+}
+
+function handleBtnsBgColor(array) {
+  setBgColor(array);
+  createBgButtons(array);
+}
+
+function customizeBgColor() {
+  const input = document.getElementById("");
+}
+
+/* COLOR CHART */
+
+function getMaxColLength(array) {
+  let columns = Object.values(array);
+
+  const colLengths = columns.map((column) => column.length);
+  const max = Math.max(...colLengths);
+  return max;
+}
+
+function createColumnData(array) {
+  const columnData = array.map((number) => {
+    let newItem = dmc.find((item) => item.code === number);
+    return newItem;
+  });
+  return columnData;
+}
+
+function createUList(index) {
+  const ul = document.createElement("ul");
+  ul.classList.add("color-chart__column");
+  ul.id = `color-chart__col${index}`;
+
+  const columnHeader = document.createElement("li");
+  columnHeader.classList.add("color-chart__col-header");
+  columnHeader.innerText = index < 10 ? `0${index}` : `${index}`;
+  ul.appendChild(columnHeader);
+
+  return ul;
+}
+
+function createChartColumns(columnData) {
+  const chartContainer = document.getElementById("color-chart__container");
+
+  for (let i = 1; i <= Object.keys(allColumnData).length; i++) {
+    let columnName = `col${i}`;
+    let currentColumnData = columnData[columnName];
+
+    let ulElement = createUList(i);
+    let chips = createChartChips(currentColumnData);
+    ulElement.append(chips);
+    chartContainer.appendChild(ulElement);
+  }
+}
+
+function createListItems(array) {
+  const fragment = document.createDocumentFragment();
+  const totalCells = getMaxColLength(allColumnData); // added
+  let count = 0; // added
+
+  array.forEach((arrayItem) => {
+    if (arrayItem) {
+      const listItem = document.createElement("li");
+      listItem.dataset.code = arrayItem.code;
+      listItem.dataset.name = arrayItem.dmcName;
+      listItem.style.backgroundColor = arrayItem.hex;
+      listItem.addEventListener("click", (e) => {
+        const newColor = getCellColor(e);
+        handleNewColor(newColor);
+      });
+      fragment.appendChild(listItem);
+      count++;
+    }
+  });
+  const delta = totalCells - count; // added
+  for (let i = 0; i < delta; i++) {
+    const listItem = document.createElement("li");
+    listItem.style.backgroundColor = "#f4f4f1";
+    fragment.appendChild(listItem);
+  }
+
+  return fragment;
+}
+
+function createChartChips(columnData) {
+  let column = createColumnData(columnData);
+  let listItems = createListItems(column);
+  return listItems;
+}
+
 /* Event Listeners*/
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -237,6 +483,8 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCurrentColors();
   colorizeSampleChip();
   renderColorInfo();
+  handleBtnsBgColor(bgColors);
+  createChartColumns(allColumnData);
 });
 
 const addSampleButton = document.getElementById("add-sample");
@@ -253,6 +501,21 @@ currentSamples.forEach((sample) => {
   sample.addEventListener("change", handleColorChange);
 });
 
+const searchColorButton = document.getElementById("color-search-btn");
+searchColorButton.addEventListener("click", () => {
+  const newColor = getInputColor();
+  handleNewColor(newColor);
+});
+
+document
+  .getElementById("color-search")
+  .addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+      const newColor = getInputColor();
+      handleNewColor(newColor);
+    }
+  });
+
 colorPicker.on("color:change", function (color) {
   const stitches = document.querySelectorAll(
     '[id^="stitch-container"] [id^="stitch-"]'
@@ -267,3 +530,5 @@ colorPicker.on("color:change", function (color) {
     });
   }
 });
+
+getMaxColLength(allColumnData);
