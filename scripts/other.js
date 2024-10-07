@@ -1,8 +1,8 @@
 const bgColors = [
   { hex: "#F4F4F1", name: "White" },
-  { hex: "#C9ADA7", name: "Taupe" },
-  { hex: "#9A8C98", name: "Warm gray" },
-  { hex: "#22223B", name: "Black" },
+  { hex: "#D0BFB4", name: "Beige" },
+  { hex: "#827873", name: "Warm gray" },
+  { hex: "#252422", name: "Black" },
 ];
 
 const col1 = [
@@ -637,49 +637,49 @@ const dmc = [
     code: "10",
     name: "Very Light Tender Green",
     dmcName: "Lemon Sherbet",
-    hex: "#e2ddba",
+    hex: "#FAFFB3",
   },
 
   {
     code: "11",
     name: "Light Tender Green",
     dmcName: "Lemon Drop",
-    hex: "#e3db7a",
+    hex: "#F1F48A",
   },
 
   {
     code: "12",
     name: "Tender Green",
     dmcName: "Citrus Yellow",
-    hex: "#d1cb48",
+    hex: "#E4F66F",
   },
 
   {
     code: "13",
     name: "Medium Light Nile Green",
     dmcName: "Spearmint",
-    hex: "#a6cf9d",
+    hex: "#A2E6C4",
   },
 
   {
     code: "14",
     name: "Pale Apple Green",
     dmcName: "Bok Choy",
-    hex: "#d2dea4",
+    hex: "#DCF1A7",
   },
 
   {
     code: "15",
     name: "Apple Green",
     dmcName: "Spring Onion",
-    hex: "#cdd38d",
+    hex: "#DCF094",
   },
 
   {
     code: "16",
     name: "Light Chartreuse",
     dmcName: "Sprout",
-    hex: "#b9c655",
+    hex: "#CBE873",
   },
 
   {
@@ -756,42 +756,42 @@ const dmc = [
     code: "27",
     name: "White Violet",
     dmcName: "Ash White",
-    hex: "#dbd7de",
+    hex: "#E2D8E9",
   },
 
   {
     code: "28",
     name: "Medium Light Eggplant",
     dmcName: "Lavender Gray",
-    hex: "#67637a",
+    hex: "#7C688D",
   },
 
   {
     code: "29",
     name: "Eggplant",
     dmcName: "Emperor Purple",
-    hex: "#2b1e38",
+    hex: "#563F69",
   },
 
   {
     code: "30",
     name: "Medium Light Blueberry",
     dmcName: "Kitten Gray",
-    hex: "#727198",
+    hex: "#8B8CD0",
   },
 
   {
     code: "31",
     name: "Blueberry",
     dmcName: "Dusty Violet",
-    hex: "#4b4d76",
+    hex: "#635BA9",
   },
 
   {
     code: "32",
     name: "Dark Blueberry",
     dmcName: "Antique Mauve",
-    hex: "#2d2f55",
+    hex: "#4C4A8C",
   },
 
   {
@@ -854,84 +854,84 @@ const dmc = [
     code: "155",
     name: "Medium Dark Blue Violet",
     dmcName: "Mauve",
-    hex: "#7475ae",
+    hex: "#7363BB",
   },
 
   {
     code: "156",
     name: "Medium Light Blue Violet",
     dmcName: "Cornflower Blue",
-    hex: "#7d8cb5",
+    hex: "#99A1EA",
   },
 
   {
     code: "157",
     name: "Very Light Cornflower Blue",
     dmcName: "Heliotrope",
-    hex: "#9cb0c9",
+    hex: "#AECBFF",
   },
 
   {
     code: "158",
     name: "Medium Very Dark Cornflower Blue",
     dmcName: "Ultramarine Blue",
-    hex: "#1d2758",
+    hex: "#30398D",
   },
 
   {
     code: "159",
     name: "Light Gray Blue",
     dmcName: "Stormy Sky",
-    hex: "#99a2b6",
+    hex: "#C5CDF1",
   },
 
   {
     code: "160",
     name: "Medium Gray Blue",
     dmcName: "Stormy Blue",
-    hex: "#6c7b97",
+    hex: "#8F9CD1",
   },
 
   {
     code: "161",
     name: "Gray Blue",
     dmcName: "Blue Ash",
-    hex: "#475776",
+    hex: "#5C6CAD",
   },
 
   {
     code: "162",
     name: "Ultra Very Light Blue",
     dmcName: "Blue Water",
-    hex: "#bad2d8",
+    hex: "#C9E7F2",
   },
 
   {
     code: "163",
     name: "Medium Caledon Green",
     dmcName: "Eucalyptus",
-    hex: "#466b52",
+    hex: "#538D7D",
   },
 
   {
     code: "164",
     name: "Light Forest Green",
     dmcName: "Pistachio",
-    hex: "#98b17b",
+    hex: "#B0E3B8",
   },
 
   {
     code: "165",
     name: "Very Light Moss Green",
     dmcName: "Linden Green",
-    hex: "#cbc46d",
+    hex: "#DEDE7D",
   },
 
   {
     code: "166",
     name: "Medium Light Moss Green",
     dmcName: "Wormwood Green",
-    hex: "#a09500",
+    hex: "#B3B305",
   },
 
   {
@@ -1057,14 +1057,14 @@ const dmc = [
     code: "311",
     name: "Medium Navy Blue",
     dmcName: "Dark Polar Blue",
-    hex: "#072544",
+    hex: "#114D8D",
   },
 
   {
     code: "312",
     name: "Very Dark Baby Blue",
     dmcName: "Midnight Blue",
-    hex: "#102c55",
+    hex: "#1C4182",
   },
 
   {
@@ -1099,14 +1099,14 @@ const dmc = [
     code: "319",
     name: "Very Dark Pistachio Green",
     dmcName: "Shaded Green",
-    hex: "#06260e",
+    hex: "#2A513D",
   },
 
   {
     code: "320",
     name: "Medium Pistachio Green",
     dmcName: "Fern",
-    hex: "#597452",
+    hex: "#689C81",
   },
 
   {
@@ -1120,7 +1120,7 @@ const dmc = [
     code: "322",
     name: "Dark Baby Blue",
     dmcName: "Delft Blue",
-    hex: "#4f7098",
+    hex: "#3E75C1",
   },
 
   {
@@ -1141,14 +1141,14 @@ const dmc = [
     code: "333",
     name: "Very Dark Blue Violet",
     dmcName: "Violet Blue",
-    hex: "#3a2f77",
+    hex: "#5C3EA3",
   },
 
   {
     code: "334",
     name: "Medium Baby Blue",
     dmcName: "Light Indigo",
-    hex: "#4b7597",
+    hex: "#307FC0",
   },
 
   {
@@ -1162,21 +1162,21 @@ const dmc = [
     code: "336",
     name: "Navy Blue",
     dmcName: "Indigo Blue",
-    hex: "#091634",
+    hex: "#182F69",
   },
 
   {
     code: "340",
     name: "Medium Blue Violet",
     dmcName: "Wisteria Blue",
-    hex: "#747cb2",
+    hex: "#9392DD",
   },
 
   {
     code: "341",
     name: "Light Blue Violet",
     dmcName: "Hydrangea Blue",
-    hex: "#94a4c4",
+    hex: "#A7B3F1",
   },
 
   {
@@ -1239,42 +1239,42 @@ const dmc = [
     code: "367",
     name: "Dark Pistachio Green",
     dmcName: "Laurel",
-    hex: "#375435",
+    hex: "#47765E",
   },
 
   {
     code: "368",
     name: "Light Pistachio Green",
     dmcName: "Eau de Nile",
-    hex: "#809468",
+    hex: "#98C3A8",
   },
 
   {
     code: "369",
     name: "Very Light Pistachio Green",
     dmcName: "Bamboo Shoot Green",
-    hex: "#b6c39e",
+    hex: "#BFE8CA",
   },
 
   {
     code: "370",
     name: "Medium Mustard",
     dmcName: "Herbes de Provence",
-    hex: "#917b49",
+    hex: "#AE995B",
   },
 
   {
     code: "371",
     name: "Mustard",
     dmcName: "Steppe",
-    hex: "#867145",
+    hex: "#B59E69",
   },
 
   {
     code: "372",
     name: "Light Mustard",
     dmcName: "Cardamom Green",
-    hex: "#a7986e",
+    hex: "#C4B782",
   },
 
   {
@@ -1408,28 +1408,28 @@ const dmc = [
     code: "469",
     name: "Avocado Green",
     dmcName: "Golden Moss Green",
-    hex: "#514e00",
+    hex: "#708F2D",
   },
 
   {
     code: "470",
     name: "Light Avocado Green",
     dmcName: "Olive Green",
-    hex: "#616c07",
+    hex: "#84A735",
   },
 
   {
     code: "471",
     name: "Very Light Avocado Green",
     dmcName: "Tarragon",
-    hex: "#847f38",
+    hex: "#AEC153",
   },
 
   {
     code: "472",
     name: "Ultra Light Avocado Green",
     dmcName: "Green Bud",
-    hex: "#b7ae58",
+    hex: "#D2DB76",
   },
 
   {
@@ -1443,84 +1443,84 @@ const dmc = [
     code: "500",
     name: "Very Dark Blue Green",
     dmcName: "Ivy",
-    hex: "#091c15",
+    hex: "#24423C",
   },
 
   {
     code: "501",
     name: "Dark Blue Green",
     dmcName: "Pond Green",
-    hex: "#31483e",
+    hex: "#3E6059",
   },
 
   {
     code: "502",
     name: "Blue Green",
     dmcName: "Almond Leaf",
-    hex: "#5c7365",
+    hex: "#5B867D",
   },
 
   {
     code: "503",
     name: "Medium Blue Green",
     dmcName: "Thyme Green",
-    hex: "#7d9a8e",
+    hex: "#8CB5AE",
   },
 
   {
     code: "505",
     name: "Jade Green",
     dmcName: "Pinewood",
-    hex: "#275635",
+    hex: "#2C775A",
   },
 
   {
     code: "517",
     name: "Dark Wedgwood",
     dmcName: "Nautical Blue",
-    hex: "#004d77",
+    hex: "#066DBC",
   },
 
   {
     code: "518",
     name: "Light Wedgwood",
     dmcName: "Nattier Blue",
-    hex: "#47859a",
+    hex: "#499DD4",
   },
 
   {
     code: "519",
     name: "Sky Blue",
     dmcName: "Bluish Spray",
-    hex: "#7daabd",
+    hex: "#83BEF1",
   },
 
   {
     code: "520",
     name: "Dark Fern Green",
     dmcName: "Wild Wood",
-    hex: "#354028",
+    hex: "#587354",
   },
 
   {
     code: "522",
     name: "Fern Green",
     dmcName: "Lattice Green",
-    hex: "#838a6f",
+    hex: "#95B191",
   },
 
   {
     code: "523",
     name: "Light Fern Green",
     dmcName: "Green Ash",
-    hex: "#919378",
+    hex: "#BED0B3",
   },
 
   {
     code: "524",
     name: "Very Light Fern Green",
     dmcName: "Pebble Green",
-    hex: "#9fa387",
+    hex: "#BBCFB4",
   },
 
   {
@@ -1569,56 +1569,56 @@ const dmc = [
     code: "561",
     name: "Very Dark Jade",
     dmcName: "Cypress Green",
-    hex: "#224d38",
+    hex: "#32715F",
   },
 
   {
     code: "562",
     name: "Medium Jade",
     dmcName: "Malachite",
-    hex: "#497954",
+    hex: "#408769",
   },
 
   {
     code: "563",
     name: "Light Jade",
     dmcName: "Celedon",
-    hex: "#84ae8d",
+    hex: "#74B499",
   },
 
   {
     code: "564",
     name: "Very Light Jade",
     dmcName: "Light Malachite",
-    hex: "#9fc09e",
+    hex: "#8CC5AD",
   },
 
   {
     code: "580",
     name: "Dark Moss Green",
     dmcName: "Cactus",
-    hex: "#5f5920",
+    hex: "#808005",
   },
 
   {
     code: "581",
     name: "Moss Green",
     dmcName: "Grasshopper",
-    hex: "#767701",
+    hex: "#989D06",
   },
 
   {
     code: "597",
     name: "Turquoise",
     dmcName: "Pack Ice Blue",
-    hex: "#568d96",
+    hex: "#58A8C6",
   },
 
   {
     code: "598",
     name: "Light Turquoise",
     dmcName: "Pale Lagoon",
-    hex: "#87b3b2",
+    hex: "#95D3DF",
   },
 
   {
@@ -1793,42 +1793,42 @@ const dmc = [
     code: "699",
     name: "Green",
     dmcName: "Candied Fruit",
-    hex: "#003e16",
+    hex: "#147636",
   },
 
   {
     code: "700",
     name: "Bright Green",
     dmcName: "Meadow Green",
-    hex: "#005a1a",
+    hex: "#288F2A",
   },
 
   {
     code: "701",
     name: "Light Green",
     dmcName: "Grass",
-    hex: "#0c6c22",
+    hex: "#43A130",
   },
 
   {
     code: "702",
     name: "Kelly Green",
     dmcName: "Spring Lawn",
-    hex: "#448239",
+    hex: "#65B446",
   },
 
   {
     code: "703",
     name: "Chartreuse",
     dmcName: "Spring Green",
-    hex: "#69963f",
+    hex: "#89C346",
   },
 
   {
     code: "704",
     name: "Bright Chartreuse",
     dmcName: "Lime",
-    hex: "#7a992a",
+    hex: "#A8CB4D",
   },
 
   {
@@ -1905,14 +1905,14 @@ const dmc = [
     code: "730",
     name: "Very Dark Olive Green",
     dmcName: "Khaki",
-    hex: "#4b3800",
+    hex: "#79710C",
   },
 
   {
     code: "732",
     name: "Olive Green",
     dmcName: "Light Bronzed Green",
-    hex: "#665100",
+    hex: "#928B26",
     previousCode: "731",
   },
 
@@ -1920,14 +1920,14 @@ const dmc = [
     code: "733",
     name: "Medium Olive Green",
     dmcName: "Golden Green",
-    hex: "#947b22",
+    hex: "#BCB22F",
   },
 
   {
     code: "734",
     name: "Light Olive Green",
     dmcName: "Broken Olive",
-    hex: "#af9541",
+    hex: "#D5CD5D",
   },
 
   {
@@ -1998,7 +1998,7 @@ const dmc = [
     code: "747",
     name: "Very Light Sky Blue",
     dmcName: "Blue Sea Mist",
-    hex: "#bedcdd",
+    hex: "#C9F1F8",
   },
 
   {
@@ -2040,14 +2040,14 @@ const dmc = [
     code: "772",
     name: "Very Light Yellow Green",
     dmcName: "Celery",
-    hex: "#ccd7aa",
+    hex: "#C4E2BB",
   },
 
   {
     code: "775",
     name: "Very Light Baby Blue",
     dmcName: "Blue Summer Rain",
-    hex: "#bcced4",
+    hex: "#C1DDF6",
   },
 
   {
@@ -2097,63 +2097,63 @@ const dmc = [
     code: "791",
     name: "Very Dark Cornflower Blue",
     dmcName: "Lapis",
-    hex: "#181548",
+    hex: "#212B82",
   },
 
   {
     code: "792",
     name: "Dark Cornflower Blue",
     dmcName: "China Blue",
-    hex: "#33437c",
+    hex: "#3E4698",
   },
 
   {
     code: "793",
     name: "Medium Cornflower Blue",
     dmcName: "Deep Ocean",
-    hex: "#607198",
+    hex: "#5E7EC9",
   },
 
   {
     code: "794",
     name: "Light Cornflower Blue",
     dmcName: "Baby Blue",
-    hex: "#7c94b5",
+    hex: "#AECBFF",
   },
 
   {
     code: "796",
     name: "Dark Royal Blue",
     dmcName: "Sévres Blue",
-    hex: "#121150",
+    hex: "#00308C",
   },
 
   {
     code: "797",
     name: "Royal Blue",
     dmcName: "French Blue",
-    hex: "#1f2e69",
+    hex: "#2A4DAC",
   },
 
   {
     code: "798",
     name: "Dark Delft Blue",
     dmcName: "Cobalt Blue",
-    hex: "#33568e",
+    hex: "#4D79C7",
   },
 
   {
     code: "799",
     name: "Medium Delft Blue",
     dmcName: "Horizon Blue",
-    hex: "#597da6",
+    hex: "#76A2E0",
   },
 
   {
     code: "800",
     name: "Pale Delft Blue",
     dmcName: "Sky Blue",
-    hex: "#98b5cc",
+    hex: "#B4D9FD",
   },
 
   {
@@ -2167,28 +2167,28 @@ const dmc = [
     code: "803",
     name: "Ultra Very Dark Baby Blue",
     dmcName: "Inky Blue",
-    hex: "#0a2447",
+    hex: "#1A3474",
   },
 
   {
     code: "807",
     name: "Peacock Blue",
     dmcName: "Turquoise Tide",
-    hex: "#488a9a",
+    hex: "#359EBB",
   },
 
   {
     code: "809",
     name: "Delft Blue",
     dmcName: "Soft Blue",
-    hex: "#7d99c0",
+    hex: "#87ACEE",
   },
 
   {
     code: "813",
     name: "Light Blue",
     dmcName: "Gallic Blue",
-    hex: "#6a94b1",
+    hex: "#6B9BD6",
   },
 
   {
@@ -2237,7 +2237,7 @@ const dmc = [
     code: "820",
     name: "Very Dark Royal Blue",
     dmcName: "Royal Blue",
-    hex: "#10033f",
+    hex: "#001675",
   },
 
   {
@@ -2251,42 +2251,42 @@ const dmc = [
     code: "823",
     name: "Dark Navy Blue",
     dmcName: "Blueberry",
-    hex: "#030215",
+    hex: "#0E204E",
   },
 
   {
     code: "824",
     name: "Very Dark Blue",
     dmcName: "Marine Blue",
-    hex: "#042452",
+    hex: "#043B76",
   },
 
   {
     code: "825",
     name: "Dark Blue",
     dmcName: "Gentian Blue",
-    hex: "#073e6d",
+    hex: "#084C8C",
   },
 
   {
     code: "826",
     name: "Medium Blue",
     dmcName: "Tuareg Blue",
-    hex: "#3d6c96",
+    hex: "#2C6CB5",
   },
 
   {
     code: "827",
     name: "Very Light Blue",
     dmcName: "Forget-Me-Knot",
-    hex: "#98bacc",
+    hex: "#ABD0ED",
   },
 
   {
     code: "828",
     name: "Ultra Very Light Sky Blue",
     dmcName: "Sea Air",
-    hex: "#bad2d5",
+    hex: "#C2E9FF",
   },
 
   {
@@ -2384,7 +2384,7 @@ const dmc = [
     code: "890",
     name: "Ultra Dark Pistachio Green",
     dmcName: "Black Forest",
-    hex: "#112317",
+    hex: "#1F4730",
   },
 
   {
@@ -2419,7 +2419,7 @@ const dmc = [
     code: "895",
     name: "Very Dark Hunter Green",
     dmcName: "Bottle Green",
-    hex: "#082907",
+    hex: "#2F5634",
   },
 
   {
@@ -2454,63 +2454,63 @@ const dmc = [
     code: "904",
     name: "Very Dark Parrot Green",
     dmcName: "Kale",
-    hex: "#2e4200",
+    hex: "#527D17",
   },
 
   {
     code: "905",
     name: "Dark Parrot Green",
     dmcName: "Budgie Green",
-    hex: "#3a5500",
+    hex: "#618D16",
   },
 
   {
     code: "906",
     name: "Medium Parrot Green",
     dmcName: "Mistletoe",
-    hex: "#567600",
+    hex: "#8FC01B",
   },
 
   {
     code: "907",
     name: "Light Parrot Green",
     dmcName: "Granny Smith",
-    hex: "#8fa10a",
+    hex: "#BAD728",
   },
 
   {
     code: "909",
     name: "Very Dark Emerald Green",
     dmcName: "Croquet Lawn",
-    hex: "#00451f",
+    hex: "#007544",
   },
 
   {
     code: "910",
     name: "Dark Emerald Green",
     dmcName: "English Green",
-    hex: "#00612d",
+    hex: "#217847",
   },
 
   {
     code: "911",
     name: "Medium Emerald Green",
     dmcName: "Golf Green",
-    hex: "#19834d",
+    hex: "#108957",
   },
 
   {
     code: "912",
     name: "Light Emerald Green",
     dmcName: "Watermint",
-    hex: "#479765",
+    hex: "#3FA278",
   },
 
   {
     code: "913",
     name: "Medium Nile Green",
     dmcName: "Jade",
-    hex: "#68ab78",
+    hex: "#67C19B",
   },
 
   {
@@ -2566,77 +2566,77 @@ const dmc = [
     code: "924",
     name: "Very Dark Gray Green",
     dmcName: "Tahitian Pearl",
-    hex: "#142d32",
+    hex: "#2F6783",
   },
 
   {
     code: "926",
     name: "Medium Gray Green",
     dmcName: "Gray Green",
-    hex: "#687979",
+    hex: "#79A0AF",
   },
 
   {
     code: "927",
     name: "Light Gray Green",
     dmcName: "Oyster",
-    hex: "#8e9c97",
+    hex: "#AFCFD4",
   },
 
   {
     code: "928",
     name: "Very Light Gray Green",
     dmcName: "Oyster Shell",
-    hex: "#bbc2bd",
+    hex: "#D4E9ED",
   },
 
   {
     code: "930",
     name: "Dark Antique Blue",
     dmcName: "Slate Gray",
-    hex: "#203343",
+    hex: "#284F77",
   },
 
   {
     code: "931",
     name: "Medium Antique Blue",
     dmcName: "Blue Gray",
-    hex: "#4e687f",
+    hex: "#497097",
   },
 
   {
     code: "932",
     name: "Light Antique Blue",
     dmcName: "Blue Gull",
-    hex: "#7d91a2",
+    hex: "#6587AE",
   },
 
   {
     code: "934",
     name: "Black Avocado Green",
     dmcName: "Seaweed",
-    hex: "#1e1e16",
+    hex: "#3E4C2F",
   },
 
   {
     code: "935",
     name: "Dark Avocado Green",
     dmcName: "Undergrowth",
-    hex: "#24240f",
+    hex: "#3F5426",
   },
 
   {
     code: "936",
     name: "Very Dark Avocado Green",
     dmcName: "Oak Moss",
-    hex: "#35330c",
+    hex: "#4D6B2E",
   },
 
   {
     code: "937",
     name: "Medium Avocado Green",
     dmcName: "Moss",
-    hex: "#3c4400",
+    hex: "#547B32",
   },
 
   {
@@ -2650,14 +2650,14 @@ const dmc = [
     code: "939",
     name: "Very Dark Navy Blue",
     dmcName: "Elderberry Blue",
-    hex: "#030107",
+    hex: "#000E33",
   },
 
   {
     code: "943",
     name: "Medium Aquamarine",
     dmcName: "Acid Green",
-    hex: "#007f63",
+    hex: "#00A38D",
   },
 
   {
@@ -2706,14 +2706,14 @@ const dmc = [
     code: "954",
     name: "Nile Green",
     dmcName: "Rice Field",
-    hex: "#88c193",
+    hex: "#8FE0BE",
   },
 
   {
     code: "955",
     name: "Light Nile Green",
     dmcName: "Pale Green",
-    hex: "#acd7b0",
+    hex: "#ADEBD1",
   },
 
   {
@@ -2734,14 +2734,14 @@ const dmc = [
     code: "958",
     name: "Dark Seagreen",
     dmcName: "Green Valley",
-    hex: "#369c86",
+    hex: "#2CAAA2",
   },
 
   {
     code: "959",
     name: "Medium Seagreen",
     dmcName: "Pale Viridian",
-    hex: "#5cb19f",
+    hex: "#59C9C2",
   },
 
   {
@@ -2769,14 +2769,14 @@ const dmc = [
     code: "964",
     name: "Light Seagreen",
     dmcName: "Sea Green",
-    hex: "#95ccc3",
+    hex: "#A7E6E2",
   },
 
   {
     code: "966",
     name: "Medium Baby Green",
     dmcName: "Soft Green",
-    hex: "#95b697",
+    hex: "#91C0AC",
   },
 
   {
@@ -2832,84 +2832,84 @@ const dmc = [
     code: "986",
     name: "Very Dark Forest Green",
     dmcName: "Boxwood",
-    hex: "#153607",
+    hex: "#305F3F",
   },
 
   {
     code: "987",
     name: "Dark Forest Green",
     dmcName: "Basil",
-    hex: "#3d5022",
+    hex: "#437553",
   },
 
   {
     code: "988",
     name: "Medium Forest Green",
     dmcName: "Verbena Stem",
-    hex: "#5f7236",
+    hex: "#5A905A",
   },
 
   {
     code: "989",
     name: "Forest Green",
     dmcName: "Fennel",
-    hex: "#718546",
+    hex: "#82BA84",
   },
 
   {
     code: "991",
     name: "Dark Aquamarine",
     dmcName: "Frog",
-    hex: "#004f3e",
+    hex: "#00857C",
   },
 
   {
     code: "992",
     name: "Light Aquamarine",
     dmcName: "Mint",
-    hex: "#488c75",
+    hex: "#42A99F",
   },
 
   {
     code: "993",
     name: "Very Light Aquamarine",
     dmcName: "Peppermint",
-    hex: "#69a690",
+    hex: "#6CC6BD",
   },
 
   {
     code: "995",
     name: "Dark Electric Blue",
     dmcName: "Plunge Pool",
-    hex: "#006196",
+    hex: "#006BD6",
   },
 
   {
     code: "996",
     name: "Medium Electric Blue",
     dmcName: "Electric Blue",
-    hex: "#2a9ece",
+    hex: "#62B5FE",
   },
 
   {
     code: "3011",
     name: "Dark Khaki Green",
     dmcName: "Deep Olive",
-    hex: "#574d2c",
+    hex: "#7D7531",
   },
 
   {
     code: "3012",
     name: "Medium Khaki Green",
     dmcName: "Dried Moss",
-    hex: "#7c6d3f",
+    hex: "#9F9556",
   },
 
   {
     code: "3013",
     name: "Light Khaki Green",
     dmcName: "Green Oyster",
-    hex: "#a29768",
+    hex: "#B2AE70",
   },
 
   {
@@ -2965,14 +2965,14 @@ const dmc = [
     code: "3041",
     name: "Medium Antique Violet",
     dmcName: "Purple Slate",
-    hex: "#675162",
+    hex: "#7B566F",
   },
 
   {
     code: "3042",
     name: "Light Antique Violet",
     dmcName: "Storm Clouds",
-    hex: "#9d8f9e",
+    hex: "#AA8DAA",
   },
 
   {
@@ -3000,21 +3000,21 @@ const dmc = [
     code: "3051",
     name: "Dark Green Gray",
     dmcName: "Forest Green",
-    hex: "#353717",
+    hex: "#66794E",
   },
 
   {
     code: "3052",
     name: "Medium Green Gray",
     dmcName: "Silver Green",
-    hex: "#727451",
+    hex: "#93A67D",
   },
 
   {
     code: "3053",
     name: "Green Gray",
     dmcName: "Avocado",
-    hex: "#888e64",
+    hex: "#B0C69F",
   },
 
   {
@@ -3042,7 +3042,7 @@ const dmc = [
     code: "3325",
     name: "Light Baby Blue",
     dmcName: "Arctic Blue",
-    hex: "#8aadc3",
+    hex: "#89B9E1",
   },
 
   {
@@ -3078,28 +3078,28 @@ const dmc = [
     code: "3345",
     name: "Dark Hunter Green",
     dmcName: "Spinach",
-    hex: "#1e2d05",
+    hex: "#375F35",
   },
 
   {
     code: "3346",
     name: "Hunter Green",
     dmcName: "Artichoke",
-    hex: "#48521b",
+    hex: "#587C49",
   },
 
   {
     code: "3347",
     name: "Medium Yellow Green",
     dmcName: "Asparagus",
-    hex: "#636d2a",
+    hex: "#74995C",
   },
 
   {
     code: "3348",
     name: "Light Yellow Green",
     dmcName: "Scallion",
-    hex: "#afae68",
+    hex: "#ADD08B",
   },
 
   {
@@ -3120,21 +3120,21 @@ const dmc = [
     code: "3362",
     name: "Dark Pine Green",
     dmcName: "Conifer",
-    hex: "#3a4127",
+    hex: "#5A713D",
   },
 
   {
     code: "3363",
     name: "Medium Pine Green",
     dmcName: "Bullfrog",
-    hex: "#57603c",
+    hex: "#6C824A",
   },
 
   {
     code: "3364",
     name: "Pine Green",
     dmcName: "Sage",
-    hex: "#797a4b",
+    hex: "#A5B06D",
   },
 
   {
@@ -3281,70 +3281,70 @@ const dmc = [
     code: "3740",
     name: "Dark Antique Violet",
     dmcName: "Gun Metal",
-    hex: "#482f3f",
+    hex: "#68455D",
   },
 
   {
     code: "3743",
     name: "Very Light Antique Violet",
     dmcName: "Rose Mist",
-    hex: "#c3bbc4",
+    hex: "#D7CBE2",
   },
 
   {
     code: "3746",
     name: "Dark Blue Violet",
     dmcName: "Iris",
-    hex: "#545797",
+    hex: "#6049A2",
   },
 
   {
     code: "3747",
     name: "Very Light Blue Violet",
     dmcName: "Ice Blue",
-    hex: "#bfc6d7",
+    hex: "#D1D5FA",
   },
 
   {
     code: "3750",
     name: "Very Dark Antique Blue",
     dmcName: "Dark Petrol Blue",
-    hex: "#081e35",
+    hex: "#1E426C",
   },
 
   {
     code: "3752",
     name: "Very Light Antique Blue",
     dmcName: "Light Porcelain Blue",
-    hex: "#9fb1bd",
+    hex: "#9BB9D9",
   },
 
   {
     code: "3753",
     name: "Ultra Very Light Antique Blue",
     dmcName: "Moonlight Blue",
-    hex: "#bcc9d1",
+    hex: "#BCD5F1",
   },
 
   {
     code: "3755",
     name: "Baby Blue",
     dmcName: "Pastel Blue",
-    hex: "#729bb7",
+    hex: "#65A1D2",
   },
 
   {
     code: "3756",
     name: "Ultra Very Light Baby Blue",
     dmcName: "Cloud Blue",
-    hex: "#dee3de",
+    hex: "#DDEFFD",
   },
 
   {
     code: "3760",
     name: "Medium Wedgwood",
     dmcName: "Fjord Blue",
-    hex: "#34728f",
+    hex: "#3F8ECF",
     previousCode: "806",
   },
 
@@ -3352,28 +3352,28 @@ const dmc = [
     code: "3761",
     name: "Light Sky Blue",
     dmcName: "Aquamarine Blue",
-    hex: "#a4cad2",
+    hex: "#9CD6F7",
   },
 
   {
     code: "3765",
     name: "Very Dark Peacock Blue",
     dmcName: "Blue Teal",
-    hex: "#004d6c",
+    hex: "#066A98",
   },
 
   {
     code: "3766",
     name: "Light Peacock Blue",
     dmcName: "Blue Green",
-    hex: "#7cb2bb",
+    hex: "#84CEE1",
   },
 
   {
     code: "3768",
     name: "Dark Gray Green",
     dmcName: "Storm",
-    hex: "#36484e",
+    hex: "#477790",
   },
 
   {
@@ -3513,49 +3513,49 @@ const dmc = [
     code: "3807",
     name: "Cornflower Blue",
     dmcName: "Tanzanite",
-    hex: "#435382",
+    hex: "#465DAF",
   },
 
   {
     code: "3808",
     name: "Ultra Very Dark Turquoise",
     dmcName: "Mallard",
-    hex: "#003035",
+    hex: "#056780",
   },
 
   {
     code: "3809",
     name: "Very Dark Turquoise",
     dmcName: "Sea Cave",
-    hex: "#005059",
+    hex: "#097995",
   },
 
   {
     code: "3810",
     name: "Dark Turquoise",
     dmcName: "Persian Blue",
-    hex: "#34757f",
+    hex: "#1F8CAD",
   },
 
   {
     code: "3811",
     name: "Very Light Turquoise",
     dmcName: "Blue Waterfall",
-    hex: "#a6c8c7",
+    hex: "#BDE7EF",
   },
 
   {
     code: "3812",
     name: "Very Dark Seagreen",
     dmcName: "Viridian",
-    hex: "#007966",
+    hex: "#008F85",
   },
 
   {
     code: "3813",
     name: "Light Blue Green",
     dmcName: "Lichen Green",
-    hex: "#a4b7a9",
+    hex: "#ABCFC8",
     previousCode: "504",
   },
 
@@ -3563,42 +3563,42 @@ const dmc = [
     code: "3814",
     name: "Aquamarine",
     dmcName: "Spruce",
-    hex: "#07695a",
+    hex: "#179088",
   },
 
   {
     code: "3815",
     name: "Dark Celadon Green",
     dmcName: "Almond Green",
-    hex: "#37634c",
+    hex: "#457E6E",
   },
 
   {
     code: "3816",
     name: "Celadon Green",
     dmcName: "Serpent",
-    hex: "#608c7b",
+    hex: "#73AB9D",
   },
 
   {
     code: "3817",
     name: "Light Celadon Green",
     dmcName: "Poplar",
-    hex: "#96ae9c",
+    hex: "#92C3B7",
   },
 
   {
     code: "3818",
     name: "Ultra Very Dark Emerald Green",
     dmcName: "Broccoli",
-    hex: "#003615",
+    hex: "#0A5C3D",
   },
 
   {
     code: "3819",
     name: "Light Moss Green",
     dmcName: "Aurous Green",
-    hex: "#c4bf56",
+    hex: "#CDCD56",
   },
 
   {
@@ -3731,98 +3731,98 @@ const dmc = [
     code: "3838",
     name: "Dark Lavender Blue",
     dmcName: "Thistle Blue",
-    hex: "#556ba0",
+    hex: "#3A5CB7",
   },
 
   {
     code: "3839",
     name: "Medium Lavender Blue",
     dmcName: "Mediterranean Blue",
-    hex: "#6b82b1",
+    hex: "#6B89DB",
   },
 
   {
     code: "3840",
     name: "Light Lavender Blue",
     dmcName: "Linen Flower Blue",
-    hex: "#a1b8d3",
+    hex: "#B5D2FD",
   },
 
   {
     code: "3841",
     name: "Pale Baby Blue",
     dmcName: "Igloo Blue",
-    hex: "#aec6d1",
+    hex: "#ADD0F0",
   },
 
   {
     code: "3842",
     name: "Very Dark Wedgwood",
     dmcName: "Prussian Blue",
-    hex: "#00395f",
+    hex: "#045FA4",
   },
 
   {
     code: "3843",
     name: "Electric Blue",
     dmcName: "Pool Blue",
-    hex: "#0070a3",
+    hex: "#1385F6",
   },
 
   {
     code: "3844",
     name: "Dark Bright Turquoise",
     dmcName: "Lagoon",
-    hex: "#006b84",
+    hex: "#01A0D0",
   },
 
   {
     code: "3845",
     name: "Medium Bright Turquoise",
     dmcName: "Turquoise",
-    hex: "#0096b2",
+    hex: "#0DB1E3",
   },
 
   {
     code: "3846",
     name: "Light Bright Turquoise",
     dmcName: "Navajo Blue",
-    hex: "#18b3cc",
+    hex: "#54CFF8",
   },
 
   {
     code: "3847",
     name: "Dark Teal Green",
     dmcName: "Chinese Green",
-    hex: "#003c37",
+    hex: "#007575",
   },
 
   {
     code: "3848",
     name: "Medium Teal Green",
     dmcName: "Mermaid’s Tail",
-    hex: "#136a64",
+    hex: "#129191",
   },
 
   {
     code: "3849",
     name: "Light Teal Green",
     dmcName: "Turquoise Green",
-    hex: "#50908c",
+    hex: "#53B2B2",
   },
 
   {
     code: "3850",
     name: "Dark Bright Green",
     dmcName: "Emerald",
-    hex: "#006d4e",
+    hex: "#00947B",
   },
 
   {
     code: "3851",
     name: "Light Bright Green",
     dmcName: "Emerald Shard",
-    hex: "#309e81",
+    hex: "#36BAA8",
   },
 
   {

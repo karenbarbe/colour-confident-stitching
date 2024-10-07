@@ -50,42 +50,56 @@
     </section>
 
     <section>
-      <div class="color-search__container">
-        <input
-          type="text"
-          name="search"
-          id="color-search"
-          aria-label="Search"
-          placeholder="Search by DMC code"
-          aria-placeholder="Search by DMC code"
-        />
-        <button id="color-search-btn">Search</button>
-        <p id="search-message"></p>
-      </div>
-      <div>
-        <h4>Try this color on a different background</h4>
-        <div class="bg-chips__container">
-          <div id="bg-button-container" class="bg-button__container"></div>
-          <div class="bg-input__container">
-            <input type="color" name="" id="" />
-            <div id="bg-button-input" class=""></div>
-          </div>
+      <div class="color-chart__header">
+        <h2>Find your thread</h2>
+        <div class="color-search__container">
+          <input
+            type="text"
+            name="search"
+            id="color-search"
+            aria-label="Search"
+            placeholder="Search by DMC code"
+            aria-placeholder="Search by DMC code"
+          />
+          <button id="color-search-btn">Search</button>
+          <p id="search-message"></p>
         </div>
       </div>
+
+      <div id="color-chart__container" class="color-chart__container"></div>
+    </section>
+
+    <section>
+      <h2>Pick the right color</h2>
       <div id="color-card-container" class="color-card__container">
         <div class="color-card__content">
+          <div id="color-card-chip"></div>
           <p>DMC</p>
           <p id="color-card-code" class="color-card__label"></p>
           <p id="color-card-name"></p>
         </div>
         <div class="color-card__sample">
-          <div id="color-card-chip"></div>
           <div id="color-card-sample1"></div>
           <div id="color-card-sample2"></div>
           <div id="color-card-sample3"></div>
+          <div id="color-card-sample4"></div>
+          <div id="color-card-sample5"></div>
         </div>
       </div>
-      <div id="color-chart__container" class="color-chart__container"></div>
+      <div>
+        <h3>Try this color on a different background</h3>
+        <div class="bg-chips__container">
+          <div id="bg-button-container" class="bg-button__container"></div>
+          <div class="bg-input__container">
+            <input type="color" name="" id="bg-input" title="Custom color" />
+            <div id="bg-button-chip" class=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Create your palette</h2>
     </section>
 
     <script src="scripts/other.js"></script>

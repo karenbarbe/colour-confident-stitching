@@ -1,5 +1,5 @@
 let currentBgColor = "";
-let alternativeBgColors = [];
+let startColor = getStartColor();
 
 let currentColors = [];
 
@@ -61,7 +61,6 @@ function getHSLvalues() {
     let hslValue = hexToHSL(hex);
     hslValues.push(hslValue);
   });
-  console.log(hslValues);
   return hslValues;
 }
 
@@ -222,6 +221,41 @@ function removeSample(event) {
   }
 }
 
+/* GET START VALUES */
+
+function getStartColor() {
+  const total = dmc.length;
+  const randomIndex = Math.floor(Math.random() * total);
+  const randomColor = dmc[randomIndex];
+  selectStartBgColor(randomColor.hex);
+  return randomColor.code;
+}
+
+function selectStartBgColor(startColor) {
+  const startLuminance = getLuminance(startColor);
+
+  const sortedBgColors = bgColors
+    .map((bg) => ({
+      ...bg,
+      luminance: getLuminance(bg.hex),
+    }))
+    .sort((a, b) => a.luminance - b.luminance);
+
+  const ranges = [
+    { max: 0.35, index: 2 }, // Very dark start color ->  second lightest bg ... was 0.25
+    { max: 0.5, index: 3 }, // Dark start color -> lightest bg
+    { max: 0.85, index: 0 }, // Light start color -> darkest bg ... was 0.75
+    { max: 1, index: 1 }, // Very light start color -> second darkest bg
+  ];
+
+  const range = ranges.find((r) => startLuminance <= r.max);
+
+  currentBgColor = sortedBgColors[range.index].hex;
+  return sortedBgColors[range.index].hex;
+}
+
+/* SEARCH FEATURE */
+
 function getInputColor() {
   const inputElement = document.getElementById("color-search");
   const input = inputElement.value.trim();
@@ -239,20 +273,17 @@ function getInputColor() {
 
 function getCellColor(event) {
   const cell = event.target.closest("li");
-  console.log(`${cell.dataset.code} ${cell.dataset.name}`);
   return cell.dataset.code;
 }
 
 function renderSearchMessage(hint) {
-  const message = document.getElementById("search-message");
+  const messages = {
+    enter: "Please enter a color code",
+    notfound: "Oops! We didn't find that color",
+    clear: "",
+  };
 
-  if (hint === "enter") {
-    message.textContent = `Please enter a color code`;
-  } else if (hint === "notfound") {
-    message.textContent = `Oops! We didn’t find that color`;
-  } else if (hint === "clear") {
-    message.textContent = "";
-  }
+  document.getElementById("search-message").textContent = messages[hint] || "";
 }
 
 function findColor(colorCode) {
@@ -315,13 +346,6 @@ function handleNewColor(colorCode) {
   return;
 }
 
-function getStartColor() {
-  const total = dmc.length;
-  const randomIndex = Math.floor(Math.random() * total);
-  const randomColor = dmc[randomIndex];
-  return randomColor.code;
-}
-
 /* BACKGROUND BUTTONS */
 
 function createBgButtons(array) {
@@ -336,63 +360,64 @@ function createBgButtons(array) {
     button.title = array[i].name;
     button.addEventListener("click", (e) => {
       changeBgColor(e.target);
+      if (customBgChip.classList.contains("focused")) {
+        customBgChip.classList.remove("focused");
+      }
     });
     fragment.appendChild(button);
   }
   container.appendChild(fragment);
 }
-/*
-function colorizeBgButtons() {
-  const bgButtons = document.querySelectorAll("button[id^=bg-button]");
-  bgButtons.forEach((button, index) => {
-    console.log(alternativeBgColors[index].hex);
-    button.style.backgroundColor = alternativeBgColors[index].hex;
-  });
-}*/
 
 /*  SET and CHANGE BACKGROUND COLOR */
 
-function findLightest(array) {
-  const lightnessBgs = array.map((bgColor) => {
-    const hsl = hexToHSL(bgColor.hex);
-    const { lightness } = hsl;
-    return lightness;
-  });
-  const lightest = Math.max(...lightnessBgs);
-  const index = lightnessBgs.findIndex((bg) => bg === lightest);
-  const lightestBg = bgColors[index];
-  return lightestBg.hex;
-}
-
-function setBgColor(array) {
-  currentBgColor = findLightest(array); // needs to be global or scoped?
+function setBgColor() {
   const container = document.getElementById("color-card-container");
   container.style.backgroundColor = currentBgColor;
 }
-/*
-function getAlternativeBgColors(array) {
-  alternativeBgColors = array.filter((bg) => bg.hex !== currentBgColor);
-}*/
+
+function setButtonFocus() {
+  const bgButtons = document.querySelectorAll("button[id^=bg-button]");
+  const currentBgColorRgb = hexToRgb(currentBgColor);
+  bgButtons.forEach((button) => {
+    if (currentBgColorRgb === button.style.backgroundColor) {
+      button.classList.add("focused");
+    } else {
+      button.classList.remove("focused");
+    }
+  });
+}
 
 function changeBgColor(element) {
   const container = document.getElementById("color-card-container");
   container.style.backgroundColor = element.style.backgroundColor;
 
+  clearFocusedButton(element);
+}
+
+function handleBtnsBgColor(array) {
+  setBgColor();
+  createBgButtons(array);
+  setButtonFocus();
+}
+
+function customizeBgColor(element) {
+  const customColor = document.getElementById("bg-input").value;
+  currentBgColor = customColor;
+
+  const container = document.getElementById("color-card-container");
+  container.style.backgroundColor = currentBgColor;
+
+  clearFocusedButton(element);
+}
+
+function clearFocusedButton(element) {
   const bgButtons = document.querySelectorAll("button[id^=bg-button]");
   bgButtons.forEach((button) => {
     button.classList.remove("focused");
   });
 
   element.classList.add("focused");
-}
-
-function handleBtnsBgColor(array) {
-  setBgColor(array);
-  createBgButtons(array);
-}
-
-function customizeBgColor() {
-  const input = document.getElementById("");
 }
 
 /* COLOR CHART */
@@ -442,15 +467,19 @@ function createChartColumns(columnData) {
 
 function createListItems(array) {
   const fragment = document.createDocumentFragment();
-  const totalCells = getMaxColLength(allColumnData); // added
-  let count = 0; // added
+  const totalCells = getMaxColLength(allColumnData);
+  let count = 0;
 
   array.forEach((arrayItem) => {
     if (arrayItem) {
       const listItem = document.createElement("li");
       listItem.dataset.code = arrayItem.code;
       listItem.dataset.name = arrayItem.dmcName;
+      listItem.title = `DMC ${arrayItem.code}`;
       listItem.style.backgroundColor = arrayItem.hex;
+      const contrastColor =
+        getLuminance(arrayItem.hex) > 0.5 ? "#000000" : "#ffffff";
+      listItem.style.setProperty("--hover-contrast-color", contrastColor);
       listItem.addEventListener("click", (e) => {
         const newColor = getCellColor(e);
         handleNewColor(newColor);
@@ -459,10 +488,10 @@ function createListItems(array) {
       count++;
     }
   });
-  const delta = totalCells - count; // added
+  const delta = totalCells - count;
   for (let i = 0; i < delta; i++) {
     const listItem = document.createElement("li");
-    listItem.style.backgroundColor = "#f4f4f1";
+    listItem.classList.add("blank-cell");
     fragment.appendChild(listItem);
   }
 
@@ -516,6 +545,12 @@ document
     }
   });
 
+const customBgButton = document.getElementById("bg-input");
+const customBgChip = document.getElementById("bg-button-chip");
+customBgButton.addEventListener("change", () => {
+  customizeBgColor(customBgChip);
+});
+
 colorPicker.on("color:change", function (color) {
   const stitches = document.querySelectorAll(
     '[id^="stitch-container"] [id^="stitch-"]'
@@ -531,4 +566,13 @@ colorPicker.on("color:change", function (color) {
   }
 });
 
-getMaxColLength(allColumnData);
+function makeWrapper(prefix, suffix) {
+  return function (text) {
+    return prefix + text + suffix;
+  };
+}
+
+let parentheses = makeWrapper("(", ")");
+let spanishQuestion = makeWrapper("¿", "?");
+console.log(parentheses("No repitas esto."));
+console.log(spanishQuestion("Que quieres saber"));

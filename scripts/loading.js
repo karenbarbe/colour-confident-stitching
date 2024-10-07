@@ -2,6 +2,8 @@ const svgStitches = [
   "./images/assets/stitch-1.svg",
   "./images/assets/stitch-2.svg",
   "./images/assets/stitch-3.svg",
+  "./images/assets/stitch-4.svg",
+  "./images/assets/stitch-5.svg",
 ];
 /*
 function loadSVGStitches() {
@@ -58,7 +60,7 @@ function loadSVGStitches() {
       })
       .then((svgContent) => {
         container.innerHTML = svgContent;
-        handleNewColor(getStartColor());
+        handleNewColor(startColor);
       })
       .catch((error) => {
         console.error(`Error loading SVG file ${file}:`, error);

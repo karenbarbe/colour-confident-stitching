@@ -104,6 +104,25 @@ function HSLToHex(h, s, l) {
   return "#" + r + g + b;
 }
 
+function getLuminance(hexColor) {
+  const r = parseInt(hexColor.slice(1, 3), 16);
+  const g = parseInt(hexColor.slice(3, 5), 16);
+  const b = parseInt(hexColor.slice(5, 7), 16);
+
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255; // Luminance value
+}
+
+function hexToRgb(hex) {
+  hex = hex.replace(/^#/, "");
+
+  const bigint = parseInt(hex, 16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 var colorPicker = new iro.ColorPicker("#picker", {
   width: 320,
   color: "#f00",
